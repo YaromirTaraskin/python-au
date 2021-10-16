@@ -1,4 +1,7 @@
-def compress(self, chars: list[str]) -> int:
+from typing import List
+
+
+def compress(self, chars: List[str]) -> int:
     s = ""
     prev = ""
     count = 1
