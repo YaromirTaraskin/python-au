@@ -1,12 +1,5 @@
-# Arrays
-
-+ [String Compression](#string-compression)
-
-## String Compression
-
-<https://leetcode.com/problems/string-compression/>
-
-```python3
+String Compression
+https://leetcode.com/problems/string-compression/
 def compress(self, chars: List[str]) -> int:
     s = ""
     prev = ""
@@ -28,4 +21,3 @@ def compress(self, chars: List[str]) -> int:
     chars.clear()
     chars.extend(list(s))
     return len(s)
-```
