@@ -4,6 +4,8 @@
 
 ## Min Stack
 
+<https://leetcode.com/problems/min-stack/>
+
 ```python3
 class LinkedListIterator:
     def __init__(self, head):
