@@ -2,33 +2,18 @@
 
 + [String Compression](#string-compression)
 
-## String Compression
++ [String Compression](#string-compression)
 
-<https://leetcode.com/problems/string-compression/>
++ [String Compression](#string-compression)
 
-```python3
-def compress(self, chars: List[str]) -> int:
-    s = ""
-    prev = ""
-    count = 1
-    for ch in chars:
-        if ch == prev:
-            count += 1
-        else:
-            if prev:
-                s += prev
-                if count > 1:
-                    s += str(count)
-                count = 1
-            prev = ch
-    if prev:
-        s += prev
-        if count > 1:
-            s += str(count)
-    chars.clear()
-    chars.extend(list(s))
-    return len(s)
-```
++ [String Compression](#string-compression)
+
++ [String Compression](#string-compression)
+
++ [String Compression](#string-compression)
+
++ [String Compression](#string-compression)
+
 + [String Compression](#string-compression)
 
 ## String Compression
@@ -56,5 +41,201 @@ def compress(self, chars: List[str]) -> int:
             s += str(count)
     chars.clear()
     chars.extend(list(s))
-    return len(s)```
+    return len(s)
+```
 
+## String Compression
+
+<https://leetcode.com/problems/string-compression/>
+
+```python3
+def compress(self, chars: List[str]) -> int:
+    s = ""
+    prev = ""
+    count = 1
+    for ch in chars:
+        if ch == prev:
+            count += 1
+        else:
+            if prev:
+                s += prev
+                if count > 1:
+                    s += str(count)
+                count = 1
+            prev = ch
+    if prev:
+        s += prev
+        if count > 1:
+            s += str(count)
+    chars.clear()
+    chars.extend(list(s))
+    return len(s)
+```
+
+## String Compression
+
+<https://leetcode.com/problems/string-compression/>
+
+```python3
+def compress(self, chars: List[str]) -> int:
+    s = ""
+    prev = ""
+    count = 1
+    for ch in chars:
+        if ch == prev:
+            count += 1
+        else:
+            if prev:
+                s += prev
+                if count > 1:
+                    s += str(count)
+                count = 1
+            prev = ch
+    if prev:
+        s += prev
+        if count > 1:
+            s += str(count)
+    chars.clear()
+    chars.extend(list(s))
+    return len(s)
+```
+
+## String Compression
+
+<https://leetcode.com/problems/string-compression/>
+
+```python3
+def compress(self, chars: List[str]) -> int:
+    s = ""
+    prev = ""
+    count = 1
+    for ch in chars:
+        if ch == prev:
+            count += 1
+        else:
+            if prev:
+                s += prev
+                if count > 1:
+                    s += str(count)
+                count = 1
+            prev = ch
+    if prev:
+        s += prev
+        if count > 1:
+            s += str(count)
+    chars.clear()
+    chars.extend(list(s))
+    return len(s)
+```
+
+## String Compression
+
+<https://leetcode.com/problems/string-compression/>
+
+```python3
+def compress(self, chars: List[str]) -> int:
+    s = ""
+    prev = ""
+    count = 1
+    for ch in chars:
+        if ch == prev:
+            count += 1
+        else:
+            if prev:
+                s += prev
+                if count > 1:
+                    s += str(count)
+                count = 1
+            prev = ch
+    if prev:
+        s += prev
+        if count > 1:
+            s += str(count)
+    chars.clear()
+    chars.extend(list(s))
+    return len(s)
+```
+
+## String Compression
+
+<https://leetcode.com/problems/string-compression/>
+
+```python3
+def compress(self, chars: List[str]) -> int:
+    s = ""
+    prev = ""
+    count = 1
+    for ch in chars:
+        if ch == prev:
+            count += 1
+        else:
+            if prev:
+                s += prev
+                if count > 1:
+                    s += str(count)
+                count = 1
+            prev = ch
+    if prev:
+        s += prev
+        if count > 1:
+            s += str(count)
+    chars.clear()
+    chars.extend(list(s))
+    return len(s)
+```
+
+## String Compression
+
+<https://leetcode.com/problems/string-compression/>
+
+```python3
+def compress(self, chars: List[str]) -> int:
+    s = ""
+    prev = ""
+    count = 1
+    for ch in chars:
+        if ch == prev:
+            count += 1
+        else:
+            if prev:
+                s += prev
+                if count > 1:
+                    s += str(count)
+                count = 1
+            prev = ch
+    if prev:
+        s += prev
+        if count > 1:
+            s += str(count)
+    chars.clear()
+    chars.extend(list(s))
+    return len(s)
+```
+
+## String Compression
+
+<https://leetcode.com/problems/string-compression/>
+
+```python3
+def compress(self, chars: List[str]) -> int:
+    s = ""
+    prev = ""
+    count = 1
+    for ch in chars:
+        if ch == prev:
+            count += 1
+        else:
+            if prev:
+                s += prev
+                if count > 1:
+                    s += str(count)
+                count = 1
+            prev = ch
+    if prev:
+        s += prev
+        if count > 1:
+            s += str(count)
+    chars.clear()
+    chars.extend(list(s))
+    return len(s)
+```
