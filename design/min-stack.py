@@ -1,10 +1,3 @@
-# Design
-
-+ [Min Stack](#min-stack)
-
-## Min Stack
-
-```python3
 class LinkedListIterator:
     def __init__(self, head):
         self.cur_node = head
@@ -57,13 +50,9 @@ class MinStack:
             self.min_val = min(self)
         return self.min_val
 
-
-
 # Your MinStack object will be instantiated and called as such:
 # obj = MinStack()
 # obj.push(val)
 # obj.pop()
 # param_3 = obj.top()
 # param_4 = obj.getMin()
-
-```
