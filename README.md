@@ -1,2 +1,2 @@
 # python-au
-My python repository to study Python in Academic University
+My python repository to study Python at Academic University
