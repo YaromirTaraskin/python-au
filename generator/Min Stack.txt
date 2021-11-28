@@ -27,7 +27,7 @@ class MinStack:
         self.min_val = None
 
     def push(self, val: int) -> None:
-        new_head = ListNode(val, self.head)
+        new_head = self.ListNode(val, self.head)
         self.head = new_head
         if self.min_val == None:
             pass
