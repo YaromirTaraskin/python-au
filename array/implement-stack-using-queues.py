@@ -1,0 +1,50 @@
+from collections import deque
+
+
+class QueueFromDeque:
+    def __init__(self):
+        self.kernel = deque()
+
+    def add(self, val):
+        self.kernel.appendleft(val)
+
+    def remove(self):
+        return self.kernel.pop()
+
+    def peek(self):
+        ret_val = self.kernel.pop()
+        self.kernel.append(ret_val)
+        return ret_val
+
+    def is_empty(self):
+        return (len(self.kernel) == 0)
+
+    def __len__(self):
+        return self.kernel.__len__()
+
+
+class MyStack:
+    def __init__(self):
+        self.q = QueueFromDeque()
+
+    def push(self, x: int) -> None:
+        self.q.add(x)
+        n = len(self.q)
+        for _ in range(n - 1):
+            self.q.add(self.q.remove())
+
+    def pop(self) -> int:
+        return self.q.remove()
+
+    def top(self) -> int:
+        return self.q.peek()
+
+    def empty(self) -> bool:
+        return self.q.is_empty()
+
+# Your MyStack object will be instantiated and called as such:
+# obj = MyStack()
+# obj.push(x)
+# param_2 = obj.pop()
+# param_3 = obj.top()
+# param_4 = obj.empty()
