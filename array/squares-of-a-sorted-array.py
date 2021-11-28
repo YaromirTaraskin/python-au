@@ -1,12 +1,3 @@
-# Array
-
-+ [Squares of a Sorted Array](#squares-of-a-sorted-array)
-
-## Squares of a Sorted Array
-
-<https://leetcode.com/problems/squares-of-a-sorted-array/>
-
-```python3
 class Solution:
     def merge_lists(self, l1, l2):
         res = []
@@ -24,5 +15,3 @@ class Solution:
         were_negative = list(map(abs, nums[:sep_index]))[::-1]
         were_not_negative = list(nums[sep_index:]) if sep_index != None else []
         return list(map(lambda x: x * x, self.merge_lists(were_negative, were_not_negative)))
-
-```
