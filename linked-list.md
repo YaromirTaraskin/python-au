@@ -2,7 +2,7 @@
 
 + [Reverse Linked List](#reverse-linked-list)
 
-+ [﻿Merge Two Sorted Lists](#﻿merge-two-sorted-lists)
++ [Merge Two Sorted Lists](#merge-two-sorted-lists)
 
 + [Palindrome Linked List](#palindrome-linked-list)
 
@@ -89,7 +89,7 @@ class Solution:
 
 ```
 
-## ﻿Merge Two Sorted Lists
+## Merge Two Sorted Lists
 
 <https://leetcode.com/problems/merge-two-sorted-lists/>
 
