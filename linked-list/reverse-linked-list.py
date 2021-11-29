@@ -1,12 +1,3 @@
-#Linked-List
-
-+ [Reverse Linked List](#reverse-linked-list)
-
-## Reverse Linked List
-
-<https://leetcode.com/problems/reverse-linked-list/>
-
-```python3
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
@@ -24,5 +15,3 @@ class Solution:
             cur.next = new_nxt
             cur = new_cur
         return prev
-            
-```
