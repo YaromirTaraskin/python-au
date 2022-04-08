@@ -6,6 +6,7 @@ def start():
     s = input()
     res = " ".join(solve(str_to_symbols(s)))
     print(f"Your expression in postfix notation:\n {res}")
+    input("\nEnter enter to exit...")
 
 
 if __name__ == "__main__":
