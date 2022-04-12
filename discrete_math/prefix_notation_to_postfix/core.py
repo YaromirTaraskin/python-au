@@ -23,8 +23,10 @@ def str_to_symbols(s: str):
 
 
 def solve(symbols):
-    while len(symbols) >= 3:
+    should_continue = True
+    while should_continue:
         i = 0
+        should_continue = False
         while i < len(symbols) - 2:
             if is_my_operator(symbols[i]) and is_number_or_expression(symbols[i + 1]) \
                     and is_number_or_expression(symbols[i + 2]):
@@ -32,6 +34,7 @@ def solve(symbols):
                 new_symbols.append(ComplexExpression(*symbols[i:i + 3]))
                 new_symbols.extend(symbols[i + 3:])
                 symbols = new_symbols
+                should_continue = True
             i += 1
 
     while True:
