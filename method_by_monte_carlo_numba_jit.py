@@ -2,8 +2,10 @@
 import random
 from math import pow
 from timer import timer  # pip install timer
+from numba import njit
 
 
+@njit
 def polynomial_function(x, coefficients):
     current_result = 0
     for i in range(len(coefficients)):
@@ -12,6 +14,7 @@ def polynomial_function(x, coefficients):
     return current_result
 
 
+@njit
 def primitive(x, coefficients):
     m_1 = []
     for i in range(len(coefficients)):
@@ -20,6 +23,7 @@ def primitive(x, coefficients):
     return polynomial_function(x, m_1)
 
 
+@njit
 def method_by_monte_carlo(left_bound, right_bound, number_of_the_dots, coefficients):
     current_result = 0
     delta_x = (right_bound - left_bound) / number_of_the_dots
@@ -30,6 +34,7 @@ def method_by_monte_carlo(left_bound, right_bound, number_of_the_dots, coefficie
     return current_result * delta_x
 
 
+@njit
 def formula_by_newton_leibniz(left_bound, right_bound, coefficients):
     return primitive(right_bound, coefficients) - primitive(left_bound, coefficients)
 
