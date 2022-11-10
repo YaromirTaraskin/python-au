@@ -34,7 +34,7 @@ def formula_by_newton_leibniz(left_bound, right_bound, coefficients):
     return primitive(right_bound, coefficients) - primitive(left_bound, coefficients)
 
 
-def main():
+def enter_data():
     coefficients = list(map(
         int, input('Enter the coefficients of the polynomial in descending order of the degree of monomials: ').split()
     ))
@@ -45,8 +45,10 @@ def main():
         'Enter the number of the dots '
         '(the more dots you enter, the more precision you achieve and the more time will be spent): '
     ))
-    print()
+    return coefficients, left_bound, right_bound, number_of_the_dots
 
+
+def perform_calculations(coefficients, left_bound, right_bound, number_of_the_dots):
     with timer(unit='ms') as mc_timer:
         calculated_with_method_by_monte_carlo = \
             method_by_monte_carlo(left_bound, right_bound, number_of_the_dots, coefficients)
@@ -68,6 +70,12 @@ def main():
             calculated_with_formula_by_newton_leibniz / calculated_with_method_by_monte_carlo
           )
           )
+
+
+def main():
+    data = enter_data()
+    print()
+    perform_calculations(*data)
 
 
 if __name__ == "__main__":
