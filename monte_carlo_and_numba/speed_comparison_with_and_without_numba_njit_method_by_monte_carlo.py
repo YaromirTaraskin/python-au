@@ -1,5 +1,4 @@
-import method_by_monte_carlo
-import method_by_monte_carlo_numba_jit
+from monte_carlo_and_numba import method_by_monte_carlo_numba_jit, method_by_monte_carlo
 
 
 def print_divider():
