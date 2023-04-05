@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+        <div class="buttons-container">
+            <a class="btn btn-warning home" href="{{ url_for('index') }}">Home</a>
+            <a class="btn btn-info refresh" href="{{ url_for('live') }}">Create new live</a>
+        </div>
+    <div class="my-wrapper">
+        <div class="counter">
+            The number of the current generation: {{ running_game_of_live.generations_counter }}
+        </div>
+    </div>
+        <table class="world">
+            {% set universe = running_game_of_live.world %}
+            {% for i in range(universe|length) %}
+                <tr>
+                    {% for j in range(universe[i]|length) %}
+                        {% if universe[i][j] %}
+                            <td class="cell living-cell"></td>
+                        {% else %}
+                            <td class="cell"></td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+{% endblock %}
+{% block scripts %}
+    {{ super() }}
+    <script>
+        setInterval(
+            () => window.location.reload(), 1000
+        );
+    </script>
+{% endblock %}

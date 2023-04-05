@@ -1,6 +1,7 @@
 .world {
     border: 1px solid black;
     border-collapse: collapse;
+    align-content: center;
 }
 
 td {
@@ -28,36 +29,26 @@ td {
     align-items: center;
 }
 
-a, table {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.home {
-    top: 5%;
-    left: 45%;
-}
-
-.refresh {
-    top: 5%;
-    left: 55%;
+table {
+    margin: auto;
 }
 
 .counter {
+    display: flex;
     margin: 20px 3px 3px;
     padding: 5px;
-    font-family: "Book Antiqua", "Arial";
+    font-family: "Book Antiqua", "Arial", sans-serif;
     background: aliceblue;
     font-size: 30px;
+    text-align: center;
     border: 1px solid indigo;
-    border-radius: 50%;
+    border-radius: 0%;
+    justify-content: center;
 }
 
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
     padding: 6px 12px;
     margin-bottom: 0;
     font-size: 14px;
@@ -76,6 +67,7 @@ a, table {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px
+
 }
 
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
@@ -98,7 +90,8 @@ a, table {
 .btn-primary {
     color: #fff;
     background-color: #337ab7;
-    border-color: #2e6da4
+    border-color: #2e6da4;
+    margin: auto;
 }
 
 .btn-primary.focus,.btn-primary:focus {
@@ -197,4 +190,24 @@ a, table {
 .btn-warning:hover {
     background-color: #f0ad4e;
     border-color: #eea236
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.my-wrapper{
+  width: fit-content;
+  margin: auto;
+}
+
+.absolute-center {
+  width: fit-content;
+  height: fit-content;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
 }
