@@ -11,11 +11,17 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/live_new')
+def live_new():
+    running_game_of_life = GameOfLife()
+    return render_template('live.html', running_game_of_life=running_game_of_life)
+
+
 @app.route('/live')
 def live():
-    running_game_of_live = GameOfLife()
-    running_game_of_live.form_new_generation()
-    return render_template('live.html', running_game_of_live=running_game_of_live)
+    running_game_of_life = GameOfLife()
+    running_game_of_life.form_new_generation()
+    return render_template('live.html', running_game_of_life=running_game_of_life)
 
 
 if __name__ == '__main__':

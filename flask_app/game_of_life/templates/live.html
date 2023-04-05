@@ -6,16 +6,18 @@
         </div>
     <div class="my-wrapper">
         <div class="counter">
-            The number of the current generation: {{ running_game_of_live.generations_counter }}
+            The number of the current generation: {{ running_game_of_life.generations_counter }}
         </div>
     </div>
         <table class="world">
-            {% set universe = running_game_of_live.world %}
+            {% set universe = running_game_of_life.world %}
             {% for i in range(universe|length) %}
                 <tr>
                     {% for j in range(universe[i]|length) %}
                         {% if universe[i][j] %}
                             <td class="cell living-cell"></td>
+                        {% elif running_game_of_life.old_world[i][j] %}
+                            <td class="cell dead-cell"></td>
                         {% else %}
                             <td class="cell"></td>
                         {% endif %}

@@ -1,3 +1,4 @@
+import copy
 import random
 from threading import Lock
 
@@ -19,11 +20,13 @@ class GameOfLife(metaclass=SingletonMeta):
         self.__width = width
         self.__height = height
         self.world = self.generate_universe()
+        self.old_world = self.generate_empty_world()
         self.generations_counter = 0
 
     def form_new_generation(self):
         universe = self.world
-        new_world = [[0 for _ in range(self.__width)] for _ in range(self.__height)]
+        self.old_world = copy.deepcopy(self.world)
+        new_world = self.generate_empty_world()
         self.generations_counter += 1
 
         n = len(universe)
@@ -46,6 +49,9 @@ class GameOfLife(metaclass=SingletonMeta):
 
     def generate_universe(self):
         return [[random.randint(0, 1) for _ in range(self.__width)] for _ in range(self.__height)]
+
+    def generate_empty_world(self):
+        return [[0 for _ in range(self.__width)] for _ in range(self.__height)]
 
     @staticmethod
     def __get_near(universe, pos, system=None):
