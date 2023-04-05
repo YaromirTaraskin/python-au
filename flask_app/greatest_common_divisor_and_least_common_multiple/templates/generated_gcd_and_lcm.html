@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+<div class="absolute-center">
+    <div class="index-content">
+        <div class="results-container">
+            {% set results_labels = ['GCD', 'LCM'] %}
+            {% set results = calculated_gcd, calculated_lcm %}
+            {% for result_item in zip(results_labels, results) %}
+            <span class="result">
+                    Calculated {{ result_item[0] }}: {{ result_item[1] }}
+                </span>
+            {% endfor %}
+        </div>
+        <div class="flex-item"><br/></div>
+        <div class="buttons-container">
+            <a class="btn btn-warning home" href="{{ url_for('index') }}">Home</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

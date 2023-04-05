@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+<div class="absolute-center">
+    <div class="index-content">
+
+        <div class="description flex-item">
+            <p>
+                This project is a simple Flask application that calculates the greatest common divisor (GCD) and
+                least
+                common multiple (LCM) of two numbers.
+            </p>
+        </div>
+
+        <div class="flex-item"></div>
+
+        <div class="form-container flex-item">
+            <form action="" method="post" class="my-form">
+                {{ form.csrf_token }}
+                {% for field in form if field.name != 'csrf_token' and field.name != 'submit' %}
+                <div class="inner-content">
+                    {{ field.label }}
+                    {{ field }}
+                    {% for error in field.errors %}
+                    {{ error }}
+                    {% endfor %}
+                </div>
+                {% endfor %}
+                {{ form.submit }}
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
